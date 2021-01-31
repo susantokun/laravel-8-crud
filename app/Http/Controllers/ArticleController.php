@@ -20,7 +20,7 @@ class ArticleController extends Controller
         return view('articles.index', [
             'title'    => 'Articles',
             'articles' => $articles,
-        ]);
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
     /**

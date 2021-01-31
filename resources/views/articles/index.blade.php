@@ -48,7 +48,7 @@
 					@if ($articles->count() > 0)
 					@foreach ($articles as $article)
 					<tr>
-						<td class="px-6 py-3 leading-6 text-center whitespace-nowrap">{{ $articles->count() * ($articles->currentPage() - 1) + $loop->iteration }}</td>
+						<td class="px-6 py-3 leading-6 text-center whitespace-nowrap">{{ ++$i }}</td>
 						<td class="w-10 px-6 py-3 leading-6 sm:w-auto">{{ $article->title }}</td>
 						<td class="px-6 py-3 leading-6">{{ Str::limit($article->body, 60) }}</td>
 						<td class="px-6 text-right select-none whitespace-nowrap">
