@@ -128,6 +128,6 @@ class ArticleController extends Controller
         $article = Article::findOrFail($id);
         $article->delete();
 
-        return redirect()->back()->with('success', 'Article <span class="italic font-medium">deleted</span> successfully.');
+        return response()->json(['message' => 'Article <span class="italic font-medium">deleted</span> successfully.']);
     }
 }
