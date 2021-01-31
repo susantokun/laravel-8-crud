@@ -14,8 +14,13 @@ class ArticleController extends Controller
      */
     public function index(Request $request)
     {
-        $pagination = 5;
-        $articles   = Article::orderBy('created_at', 'desc')->paginate($pagination);
+        $pagination  = 5;
+        $articles    = Article::when($request->keyword, function ($query) use ($request) {
+            $query
+        ->where('title', 'like', "%{$request->keyword}%");
+        })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $articles->appends($request->only('keyword'));
 
         return view('articles.index', [
             'title'    => 'Articles',
