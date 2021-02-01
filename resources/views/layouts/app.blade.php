@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+	class="dark">
 
 <head>
 	<meta charset="utf-8">
@@ -33,7 +34,7 @@
 		defer></script>
 </head>
 
-<body class="font-sans antialiased text-gray-800 bg-secondary-50">
+<body class="font-sans antialiased text-gray-800 bg-secondary-50 dark:bg-secondary-900">
 	<div class="container h-full max-w-4xl p-4 mx-auto md:p-6">
 		<header class="flex flex-col items-center justify-center">
 			<img src="{{ asset('avatar192.png') }}"
@@ -44,7 +45,7 @@
 				<a href="https://www.susantokun.com/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-base text-gray-600 hover:text-red-500">SUSANTOKUN.COM</a>
+					class="text-base text-gray-600 dark:text-gray-400 dark:hover:text-red-400 hover:text-red-500">SUSANTOKUN.COM</a>
 			</div>
 		</header>
 		<main>

@@ -2,11 +2,11 @@
 	<x-slot name="title">{{ $title }}</x-slot>
 
 	{{-- header content --}}
-	<div class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 bg-secondary-200">
+	<div class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 dark:border-secondary-700 bg-secondary-200 dark:bg-secondary-800">
 		<div class="flex flex-col justify-between sm:flex-row">
 			<div class="text-center sm:text-left flex-start">
-				<h3 class="text-lg font-semibold leading-6 text-gray-800">Data {{ $title }}</h3>
-				<p class="mt-px text-sm leading-5 text-gray-600 sm:mt-1">The following data of {{ Str::lower(__($title)) }}.</p>
+				<h3 class="text-lg font-semibold leading-6 text-gray-800 dark:text-gray-200">Data {{ $title }}</h3>
+				<p class="mt-px text-sm leading-5 text-gray-600 dark:text-gray-400 sm:mt-1">The following data of {{ Str::lower(__($title)) }}.</p>
 			</div>
 			<div class="flex items-center justify-center mt-2 space-x-2 sm:mt-0">
 				<a href="{{ route('articles.create') }}"
@@ -27,7 +27,7 @@
 							name="keyword"
 							value="{{ request('keyword') }}"
 							placeholder="Search ....."
-							class="block w-full pl-4 pr-10 text-sm leading-5 transition rounded-full shadow-sm border-secondary-300 bg-secondary-50 focus:bg-white focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+							class="block w-full pl-4 pr-10 text-sm leading-5 text-gray-800 transition rounded-full shadow-sm dark:text-gray-200 border-secondary-300 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-800 focus:bg-white focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
 						<button type="submit"
 							class="absolute top-0 right-0 inline-flex items-center px-2 py-2 ml-1 mr-2 text-sm focus:outline-none">
 							<svg class="w-5 h-5 text-gray-500 transition dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-25"
@@ -53,10 +53,11 @@
 	@endif
 
 	{{-- table --}}
-	<div class="overflow-hidden border rounded-lg border-secondary-300">
+	<div class="overflow-hidden border rounded-lg border-secondary-300 dark:border-secondary-700">
 		<div class="overflow-x-auto">
 			<table class="min-w-full">
-				<thead class="text-sm border-b select-none border-secondary-300 bg-secondary-200">
+				<thead
+					class="text-sm text-gray-800 border-b select-none dark:text-gray-200 border-secondary-300 dark:border-secondary-700 bg-secondary-200 dark:bg-secondary-800">
 					<tr>
 						<th class="px-6 py-3 font-bold text-center uppercase">No</th>
 						<th class="px-6 py-3 font-bold text-left uppercase">Title</th>
@@ -64,7 +65,7 @@
 						<th class="px-6 py-3 font-bold text-right uppercase"></th>
 					</tr>
 				</thead>
-				<tbody class="text-sm text-gray-700 bg-white divide-y divide-secondary-300">
+				<tbody class="text-sm text-gray-700 bg-white divide-y dark:text-gray-300 dark:bg-secondary-900 divide-secondary-300 dark:divide-secondary-700">
 					@if ($articles->count() > 0)
 					@foreach ($articles as $article)
 					<tr>
@@ -108,7 +109,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="text-gray-600 bg-secondary-50">
+		<div class="text-gray-600 dark:text-gray-400 bg-secondary-50 dark:bg-secondary-900">
 			{{ $articles->links() }}
 		</div>
 	</div>

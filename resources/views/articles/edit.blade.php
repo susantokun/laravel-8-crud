@@ -2,15 +2,15 @@
 	<x-slot name="title">{{ $title }}</x-slot>
 
 	{{-- header content --}}
-	<div class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 bg-secondary-200">
+	<div class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 bg-secondary-200 dark:border-secondary-700 dark:bg-secondary-800">
 		<div class="flex flex-col justify-between sm:flex-row">
 			<div class="text-center sm:text-left flex-start">
-				<h3 class="text-lg font-semibold leading-6 text-gray-800">{{ $title }}</h3>
-				<p class="mt-px text-sm leading-5 text-gray-600 sm:mt-1">Change the following information.</p>
+				<h3 class="text-lg font-semibold leading-6 text-gray-800 dark:text-gray-200">{{ $title }}</h3>
+				<p class="mt-px text-sm leading-5 text-gray-600 sm:mt-1 dark:text-gray-400">Change the following information.</p>
 			</div>
 			<div class="flex items-end justify-center">
 				<div
-					class="flex items-center px-3 py-1 mt-1 text-xs text-gray-600 border rounded-full border-secondary-300 bg-secondary-300 sm:py-0 sm:mt-0 sm:border-none sm:bg-transparent sm:px-0">
+					class="flex items-center px-3 py-1 mt-1 text-xs text-gray-600 border rounded-full dark:text-gray-400 border-secondary-300 bg-secondary-300 sm:py-0 sm:mt-0 sm:border-none sm:bg-transparent sm:px-0 dark:border-secondary-700 dark:bg-secondary-700 sm:dark:bg-transparent">
 					<span>Home</span>
 					<svg class="w-3 h-3"
 						xmlns="http://www.w3.org/2000/svg"

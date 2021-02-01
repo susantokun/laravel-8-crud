@@ -2,15 +2,15 @@
 	<x-slot name="title">{{ $title }}</x-slot>
 
 	{{-- header content --}}
-	<div class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 bg-secondary-200">
+	<div class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 bg-secondary-200 dark:border-secondary-700 dark:bg-secondary-800">
 		<div class="flex flex-col justify-between sm:flex-row">
 			<div class="text-center sm:text-left flex-start">
-				<h3 class="text-lg font-semibold leading-6 text-gray-800">{{ $title }}</h3>
-				<p class="mt-px text-sm leading-5 text-gray-600 sm:mt-1">The following are detailed information.</p>
+				<h3 class="text-lg font-semibold leading-6 text-gray-800 dark:text-gray-200">{{ $title }}</h3>
+				<p class="mt-px text-sm leading-5 text-gray-600 sm:mt-1 dark:text-gray-400">The following are detailed information.</p>
 			</div>
 			<div class="flex items-end justify-center">
 				<div
-					class="flex items-center px-3 py-1 mt-1 text-xs text-gray-600 border rounded-full border-secondary-300 bg-secondary-300 sm:py-0 sm:mt-0 sm:border-none sm:bg-transparent sm:px-0">
+					class="flex items-center px-3 py-1 mt-1 text-xs text-gray-600 border rounded-full dark:text-gray-400 border-secondary-300 bg-secondary-300 sm:py-0 sm:mt-0 sm:border-none sm:bg-transparent sm:px-0 dark:border-secondary-700 dark:bg-secondary-800 sm:dark:bg-transparent">
 					<span>Home</span>
 					<svg class="w-3 h-3"
 						xmlns="http://www.w3.org/2000/svg"
@@ -38,26 +38,30 @@
 	</div>
 
 	{{-- content --}}
-	<div class="overflow-hidden text-sm border rounded-lg shadow-md border-secondary-300 bg-secondary-200">
+	<div class="overflow-hidden text-sm border rounded-lg shadow-md border-secondary-300 dark:border-secondary-700 bg-secondary-200 dark:bg-secondary-800">
 
-		<div class="gap-4 px-4 py-4 leading-5 bg-white sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50">
+		<div
+			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Title</div>
-			<div class="text-gray-700 sm:col-span-4 lg:col-span-5">{{ $article->title }}</div>
+			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->title }}</div>
 		</div>
 
-		<div class="gap-4 px-4 py-4 leading-5 bg-white sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50">
+		<div
+			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Content</div>
-			<div class="text-gray-700 sm:col-span-4 lg:col-span-5">{{ $article->body }}</div>
+			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->body }}</div>
 		</div>
 
-		<div class="gap-4 px-4 py-4 leading-5 bg-white sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50">
+		<div
+			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Created</div>
-			<div class="text-gray-700 sm:col-span-4 lg:col-span-5">{{ $article->created_at->isoFormat('D MMMM Y') }}</div>
+			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->created_at->isoFormat('D MMMM Y') }}</div>
 		</div>
 
-		<div class="gap-4 px-4 py-4 leading-5 bg-white sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50">
+		<div
+			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Updated</div>
-			<div class="text-gray-700 sm:col-span-4 lg:col-span-5">{{ $article->updated_at->isoFormat('D MMMM Y') }}</div>
+			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->updated_at->isoFormat('D MMMM Y') }}</div>
 		</div>
 
 		{{-- action --}}
