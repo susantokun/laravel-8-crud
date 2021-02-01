@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-	class="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
 	<meta charset="utf-8">
@@ -46,6 +45,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					class="text-base text-gray-600 dark:text-gray-400 dark:hover:text-red-400 hover:text-red-500">SUSANTOKUN.COM</a>
+				<div class="mt-2 switcher"></div>
 			</div>
 		</header>
 		<main>
