@@ -41,25 +41,25 @@
 	<div class="overflow-hidden text-sm border rounded-lg shadow-md border-secondary-300 dark:border-secondary-700 bg-secondary-200 dark:bg-secondary-800">
 
 		<div
-			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
+			class="gap-4 px-4 py-4 leading-5 text-gray-800 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Title</div>
 			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->title }}</div>
 		</div>
 
 		<div
-			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
+			class="gap-4 px-4 py-4 leading-5 text-gray-800 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Content</div>
 			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->body }}</div>
 		</div>
 
 		<div
-			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
+			class="gap-4 px-4 py-4 leading-5 text-gray-800 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Created</div>
 			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->created_at->isoFormat('D MMMM Y') }}</div>
 		</div>
 
 		<div
-			class="gap-4 px-4 py-4 leading-5 text-gray-200 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
+			class="gap-4 px-4 py-4 leading-5 text-gray-800 bg-white dark:bg-secondary-900 sm:grid sm:grid-cols-6 sm:px-6 odd:bg-secondary-50 dark:odd:bg-secondary-800 dark:text-gray-200">
 			<div class="mb-1 font-medium sm:col-span-2 lg:col-span-1 sm:mb-0">Updated</div>
 			<div class="text-gray-700 dark:text-gray-300 sm:col-span-4 lg:col-span-5">{{ $article->updated_at->isoFormat('D MMMM Y') }}</div>
 		</div>
