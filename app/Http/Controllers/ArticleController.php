@@ -17,7 +17,8 @@ class ArticleController extends Controller
         $pagination  = 5;
         $articles    = Article::when($request->keyword, function ($query) use ($request) {
             $query
-        ->where('title', 'like', "%{$request->keyword}%");
+        ->where('title', 'like', "%{$request->keyword}%")
+        ->orWhere('body', 'like', "%{$request->keyword}%");
         })->orderBy('created_at', 'desc')->paginate($pagination);
 
         $articles->appends($request->only('keyword'));
