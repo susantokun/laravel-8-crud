@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::defaultView('pagination::default');
         Paginator::defaultSimpleView('pagination::simple-default');
 
-        config(['app.locale' => 'id']);
-        \Carbon\Carbon::setLocale('id');
+        // config(['app.locale' => 'id']);
+        // \Carbon\Carbon::setLocale('id');
     }
 }

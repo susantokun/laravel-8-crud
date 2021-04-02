@@ -2,11 +2,12 @@
 	<x-slot name="title">{{ $title }}</x-slot>
 
 	{{-- header content --}}
-	<div class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 dark:border-secondary-700 dark:bg-secondary-800 bg-secondary-200">
+	<div
+		class="px-6 py-4 mb-4 overflow-hidden border rounded-lg shadow-sm border-secondary-300 dark:border-secondary-700 dark:bg-secondary-800 bg-secondary-200">
 		<div class="flex flex-col justify-between sm:flex-row">
 			<div class="text-center sm:text-left flex-start">
 				<h3 class="text-lg font-semibold leading-6 text-gray-800 dark:text-gray-200">{{ $title }}</h3>
-				<p class="mt-px text-sm leading-5 text-gray-600 dark:text-gray-400 sm:mt-1">Fill in the following information.</p>
+				<p class="mt-px text-sm leading-5 text-gray-600 dark:text-gray-400 sm:mt-1">{{ __('articles.create_description') }}</p>
 			</div>
 			<div class="flex items-end justify-center">
 				<div

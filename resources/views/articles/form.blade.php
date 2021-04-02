@@ -1,10 +1,26 @@
-<div class="p-4 overflow-hidden border rounded-lg shadow-md sm:p-6 border-secondary-300 dark:border-secondary-700 bg-secondary-200 dark:bg-secondary-800">
+<div
+	class="p-4 overflow-hidden border rounded-lg shadow-md sm:p-6 border-secondary-300 dark:border-secondary-700 bg-secondary-200 dark:bg-secondary-800">
 	<div class="grid grid-cols-6 gap-4">
+
+		{{-- category_id --}}
+		<div class="col-span-6">
+			<label for="category_id"
+				class="block text-sm font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300">{{ __('articles.category_id') }}</label>
+			<input type="text"
+				class="block w-full mt-1 text-sm text-gray-800 transition rounded-lg shadow-sm dark:text-gray-200 border-secondary-300 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 focus:bg-white focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+				name="category_id"
+				id="category_id"
+				autofocus
+				value="{{ old('category_id') ?? $article->category_id }}">
+			@error('category_id')
+			<p class="mt-1 text-xs font-medium text-red-500 dark:text-red-400">{{ $message }}</p>
+			@enderror
+		</div>
 
 		{{-- title --}}
 		<div class="col-span-6">
 			<label for="title"
-				class="block text-sm font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300">Title</label>
+				class="block text-sm font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300">{{ __('articles.title') }}</label>
 			<input type="text"
 				class="block w-full mt-1 text-sm text-gray-800 transition rounded-lg shadow-sm dark:text-gray-200 border-secondary-300 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 focus:bg-white focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
 				name="title"
@@ -19,7 +35,7 @@
 		{{-- content --}}
 		<div class="col-span-6">
 			<label for="content"
-				class="block text-sm font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300">Content</label>
+				class="block text-sm font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300">{{ __('articles.content') }}</label>
 			<textarea
 				class="block w-full mt-1 text-sm text-gray-800 transition rounded-lg shadow-sm dark:text-gray-200 border-secondary-300 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 focus:bg-white focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
 				name="content"

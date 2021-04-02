@@ -37,7 +37,7 @@ class ArticleController extends Controller
     public function create()
     {
         return view('articles.create', [
-            'title'   => 'Create Article',
+            'title'   => __('articles.create') . ' ' . __('articles.article'),
             'submit'  => 'Create',
             'article' => new Article(),
         ]);
@@ -52,13 +52,15 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'    => 'required|string|max:255|unique:articles,title',
-            'content'  => 'required',
+            'title'       => 'required|string|max:255|unique:articles,title',
+            'content'     => 'required',
+            'category_id' => 'required',
         ]);
 
         Article::create([
-            'title' => $request->title,
-            'body'  => $request->content,
+            'title'        => $request->title,
+            'body'         => $request->content,
+            'category_id'  => $request->category_id,
         ]);
 
         return redirect()->back()->with('success', 'Article <span class="italic font-medium">created</span> successfully.');
